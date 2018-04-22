@@ -17,3 +17,6 @@ yarn-error.log
 .phpunit
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
+
+.idea
+composer.phar
