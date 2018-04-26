@@ -55,7 +55,7 @@ class Job
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $how_to_apply;
+    private $howToApply;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -85,7 +85,7 @@ class Job
     /**
      * @ORM\Column(type="datetime")
      */
-    private $created_at;
+    private $createdAt;
 
     /**
      * @ORM\Column(type="datetime")
@@ -246,16 +246,16 @@ class Job
      */
     public function getHowToApply(): ?string
     {
-        return $this->how_to_apply;
+        return $this->howToApply;
     }
 
     /**
-     * @param null|string $how_to_apply
+     * @param null|string $howToApply
      * @return Job
      */
-    public function setHowToApply(?string $how_to_apply): self
+    public function setHowToApply(?string $howToApply): self
     {
-        $this->how_to_apply = $how_to_apply;
+        $this->howToApply = $howToApply;
 
         return $this;
     }
@@ -360,16 +360,16 @@ class Job
      */
     public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
     /**
-     * @param \DateTimeInterface $created_at
+     * @param \DateTimeInterface $createdAt
      * @return Job
      */
-    public function setCreatedAt(\DateTimeInterface $created_at): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
-        $this->created_at = $created_at;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
