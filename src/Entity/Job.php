@@ -80,7 +80,7 @@ class Job
     /**
      * @ORM\Column(type="datetime")
      */
-    private $expires_at;
+    private $expiresAt;
 
     /**
      * @ORM\Column(type="datetime")
@@ -90,7 +90,7 @@ class Job
     /**
      * @ORM\Column(type="datetime")
      */
-    private $updated_at;
+    private $updatedAt;
 
 
     /**
@@ -341,16 +341,16 @@ class Job
      */
     public function getExpiresAt(): ?\DateTimeInterface
     {
-        return $this->expires_at;
+        return $this->expiresAt;
     }
 
     /**
-     * @param \DateTimeInterface $expires_at
+     * @param \DateTimeInterface $expiresAt
      * @return Job
      */
-    public function setExpiresAt(\DateTimeInterface $expires_at): self
+    public function setExpiresAt(\DateTimeInterface $expiresAt): self
     {
-        $this->expires_at = $expires_at;
+        $this->expiresAt = $expiresAt;
 
         return $this;
     }
@@ -379,16 +379,16 @@ class Job
      */
     public function getUpdatedAt(): ?\DateTimeInterface
     {
-        return $this->updated_at;
+        return $this->updatedAt;
     }
 
     /**
-     * @param \DateTimeInterface $updated_at
+     * @param \DateTimeInterface $updatedAt
      * @return Job
      */
-    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
-        $this->updated_at = $updated_at;
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }
