@@ -43,7 +43,7 @@ class Category
      * @param Job[]|ArrayCollection
      * @param Affiliate[]|ArrayCollection
      */
-    public function __construct($jobs, $affiliates)
+    public function __construct()
     {
         $this->jobs = new ArrayCollection();
         $this->affiliates = new ArrayCollection();

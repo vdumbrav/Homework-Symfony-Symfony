@@ -56,7 +56,7 @@ class Affiliate
      * Affiliate constructor.
      * @param Category[]|ArrayCollection
      */
-    public function __construct($categories)
+    public function __construct()
     {
         $this->categories = new ArrayCollection();
     }
