@@ -34,14 +34,12 @@ class Category
     /**
      * @var Affiliate[]|ArrayCollection
      *
-     * @ORM\ManyToMany(targetEntity="App\Entity\Affiliate", mappedBy="categories")
+     * @ORM\ManyToMany(targetEntity="Affiliate", mappedBy="categories")
      */
     private $affiliates;
 
     /**
      * Category constructor.
-     * @param Job[]|ArrayCollection
-     * @param Affiliate[]|ArrayCollection
      */
     public function __construct()
     {

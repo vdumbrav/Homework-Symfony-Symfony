@@ -54,7 +54,6 @@ class Affiliate
 
     /**
      * Affiliate constructor.
-     * @param Category[]|ArrayCollection
      */
     public function __construct()
     {
