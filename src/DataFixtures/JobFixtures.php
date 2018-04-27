@@ -3,11 +3,9 @@
 namespace App\DataFixtures;
 
 
-use App\Entity\Job;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
-use Faker;
 
 class JobFixtures extends Fixture implements OrderedFixtureInterface
 {
@@ -54,3 +52,4 @@ class JobFixtures extends Fixture implements OrderedFixtureInterface
         return 2;
     }
 }
+
