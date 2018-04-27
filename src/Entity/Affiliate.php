@@ -164,20 +164,29 @@ class Affiliate
     }
 
     /**
-     * @return Category[]|ArrayCollection
+     * @param Category $category
+     *
+     * @return self
      */
-    public function getCategories()
+    public function addCategory(Category $category): self
     {
-        return $this->categories;
+        if (!$this->$category->contains($category)) {
+            $this->$category->add($category);
+        }
+
+        return $this;
     }
 
     /**
-     * @param Category[]|ArrayCollection $categories
+     * @param Category $category
+     *
      * @return self
      */
-    public function setCategories($categories): self
+    public function removeCategory(Category $category): self
     {
-        $this->categories = $categories;
+        $this->$category->removeElement($category);
+
+        return $this;
     }
 
     /**

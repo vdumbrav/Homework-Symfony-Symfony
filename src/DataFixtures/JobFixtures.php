@@ -21,7 +21,7 @@ class JobFixtures extends Fixture implements OrderedFixtureInterface
 //        for ($i = 0; $i < 10; $i++) {
 //
 //            $job = new Job();
-////            $job->setCategory($manager->$this->getReference('category'));
+////            $job->setCategory($this->getReference('category'));
 //
 //            $job->setType('full-time');
 //            $job->setCompany($faker->company);

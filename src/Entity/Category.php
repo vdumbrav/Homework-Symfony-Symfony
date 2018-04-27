@@ -73,7 +73,13 @@ class Category
 
         return $this;
     }
-
+    /**
+     * @return Job[]|ArrayCollection
+     */
+    public function getJobs()
+    {
+        return $this->jobs;
+    }
     /**
      * @param Job $job
      *
@@ -113,7 +119,7 @@ class Category
      *
      * @return self
      */
-    public function addAffiliate($affiliate): self
+    public function addAffiliate(Affiliate $affiliate): self
     {
         if (!$this->affiliates->contains($affiliate)) {
             $this->affiliates->add($affiliate);
