@@ -73,6 +73,7 @@ class Category
 
         return $this;
     }
+
     /**
      * @return Job[]|ArrayCollection
      */
@@ -80,6 +81,7 @@ class Category
     {
         return $this->jobs;
     }
+
     /**
      * @param Job $job
      *
