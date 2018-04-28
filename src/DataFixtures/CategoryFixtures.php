@@ -27,8 +27,7 @@ class CategoryFixtures extends Fixture implements OrderedFixtureInterface
 
             $manager->persist($category);
 
-//            $this->addReference('category', $category);
-
+            $this->addReference('category_' . $i, $category);
         }
 
         $manager->flush();
