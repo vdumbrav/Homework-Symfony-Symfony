@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href="../node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+        <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <script href="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script href="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script href="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script href="../node_modules/pace-progress/pace.min.js"></script>
+        <script href="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+        <script href="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+        <!-- Plugins and scripts required by this view-->
+        <script href="../node_modules/chart.js/dist/Chart.min.js"></script>
     </body>
 </html>

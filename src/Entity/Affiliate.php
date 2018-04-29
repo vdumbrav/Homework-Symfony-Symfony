@@ -59,6 +59,14 @@ class Affiliate
     {
         $this->categories = new ArrayCollection();
     }
+    /**
+     * toString
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getId();
+    }
 
     /**
      * @return int|null
@@ -162,7 +170,13 @@ class Affiliate
 
         return $this;
     }
-
+    /**
+     * @return Category[]|ArrayCollection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
     /**
      * @param Category $category
      *
