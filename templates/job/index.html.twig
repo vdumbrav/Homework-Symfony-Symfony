@@ -3,24 +3,23 @@
 {% block title %}Job index{% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="main-table">
-    <h1>Job index</h1>
 
-    <table  class="table table-striped table-bordered display responsive nowrap" width="100% ">
+    <div class="header-block">
+        <h1>Job</h1><a class="btn btn-primary" href="{{ path('job_new') }}">Create new Job</a>
+    </div>
+    <table class="table table-striped table-bordered display responsive nowrap" width="100% ">
         <thead>
-            <tr>
-                <th>Type</th>
-                <th>Company</th>
-                <th >Logo</th>
-                <th>Position</th>
-                <th>Location</th>
-                <th>Activated</th>
-                <th>Email</th>
-                <th>CreatedAt</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Type</th>
+            <th>Company</th>
+            <th>Logo</th>
+            <th>Position</th>
+            <th>Location</th>
+            <th>Activated</th>
+            <th>Email</th>
+            <th>CreatedAt</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for job in jobs %}
@@ -46,7 +45,4 @@
         </tbody>
     </table>
 
-                <a href="{{ path('job_new') }}">Create new</a></div>
-        </div>
-    </div>
 {% endblock %}

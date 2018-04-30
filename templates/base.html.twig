@@ -8,10 +8,17 @@
     {% endblock %}
 </head>
 <body class="app header-fixed sidebar-fixed aside-menu-fixed sidebar-lg-show">
+
 {% include 'home/header.html.twig' %}
 {% include 'home/sidebar.html.twig' %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="main-table">
 {% block body %}
 {% endblock %}
+        </div>
+    </div>
+</div>
 {% include 'home/footer.html.twig' %}
 
 {% block javascripts %}

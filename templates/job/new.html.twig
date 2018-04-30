@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}New Job{% endblock %}
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
 {% block body %}
-    <h1>Create new Job</h1>
+    <div class="form-main">
+        <h1>Create new Job</h1>
 
-    {{ include('job/_form.html.twig') }}
+        {{ include('job/_form.html.twig') }}
 
-    <a href="{{ path('job_index') }}">back to list</a>
+        <a href="{{ path('job_index') }}">back to list</a></div>
 {% endblock %}
