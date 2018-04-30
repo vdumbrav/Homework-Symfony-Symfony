@@ -15,6 +15,7 @@
     "build": "encore production"
   },
   "dependencies": {
+    "coreui": "^0.4.2-alpha2",
     "datatables.net": "^1.10.16",
     "datatables.net-bs4": "^1.10.16",
     "datatables.net-dt": "^1.10.16",

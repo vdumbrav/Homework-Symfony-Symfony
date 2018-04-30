@@ -1,0 +1,37 @@
+<div class="app-body">
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                      Dashboard
+                    </a>
+                </li>
+                <li class="nav-title">JOBBET</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('category_index') }}">
+                        <i class="nav-icon icon-drop"></i> Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('job_index') }}">
+                        <i class="nav-icon icon-pencil"></i> Job</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('affiliate_index') }}">
+                        <i class="nav-icon icon-pencil"></i> Affiliate</a>
+                </li>
+            </ul>
+        </nav>
+        {#<button class="sidebar-minimizer brand-minimizer" type="button"></button>#}
+    </div>
+    <main class="main">
+        <!-- Breadcrumb-->
+        {#<ol class="breadcrumb">#}
+            {#<li class="breadcrumb-item">Home</li>#}
+            {#<li class="breadcrumb-item">#}
+                {#<a href="#">Admin</a>#}
+            {#</li>#}
+            {#<li class="breadcrumb-item active">Dashboard</li>#}
+        {#</ol>#}
+    </main>
+</div>

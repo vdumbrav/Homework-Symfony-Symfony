@@ -3,6 +3,9 @@
 {% block title %}Job index{% endblock %}
 
 {% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="main-table">
     <h1>Job index</h1>
 
     <table  class="table table-striped table-bordered display responsive nowrap" width="100% ">
@@ -24,7 +27,7 @@
             <tr>
                 <td>{{ job.type }}</td>
                 <td>{{ job.company }}</td>
-                <td><img  class="img-thumbnail" src="{{ job.logo }}" alt=""></td>
+                <td><img class="img-fluid" src="{{ job.logo }}" width="100px" alt=""></td>
                 <td>{{ job.position }}</td>
                 <td>{{ job.location }}</td>
                 <td>{{ job.activated ? 'Yes' : 'No' }}</td>
@@ -43,5 +46,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('job_new') }}">Create new</a>
+                <a href="{{ path('job_new') }}">Create new</a></div>
+        </div>
+    </div>
 {% endblock %}

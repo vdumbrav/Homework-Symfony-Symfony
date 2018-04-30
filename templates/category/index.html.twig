@@ -3,6 +3,9 @@
 {% block title %}Category index{% endblock %}
 
 {% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="main-table">
     <h1>Category index</h1>
 
     <table class="table">
@@ -31,5 +34,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('category_new') }}">Create new</a>
+                <a href="{{ path('category_new') }}">Create new</a></div>
+        </div>
+    </div>
 {% endblock %}
