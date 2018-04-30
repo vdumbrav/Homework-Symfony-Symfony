@@ -79,7 +79,7 @@ class AffiliateController extends Controller
      */
     public function delete(Request $request, Affiliate $affiliate): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$affiliate->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $affiliate->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($affiliate);
             $em->flush();

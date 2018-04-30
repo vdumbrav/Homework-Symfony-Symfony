@@ -17,8 +17,7 @@ class AffiliateType extends AbstractType
             ->add('token')
             ->add('active')
             ->add('createdAt')
-            ->add('categories')
-        ;
+            ->add('categories');
     }
 
     public function configureOptions(OptionsResolver $resolver)

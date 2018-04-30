@@ -404,7 +404,7 @@ class Job
     /**
      * @return Category
      */
-    public function getCategory() : ?Category
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
@@ -414,7 +414,7 @@ class Job
      *
      * @return self
      */
-    public function setCategory(Category $category) : self
+    public function setCategory(Category $category): self
     {
         $this->category = $category;
 
@@ -429,6 +429,7 @@ class Job
         $this->createdAt = new \DateTime();
         $this->updatedAt = new \DateTime();
     }
+
     /**
      * @ORM\PreUpdate()
      */

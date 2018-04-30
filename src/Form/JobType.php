@@ -27,8 +27,7 @@ class JobType extends AbstractType
             ->add('expiresAt')
             ->add('createdAt')
             ->add('updatedAt')
-            ->add('category')
-        ;
+            ->add('category');
     }
 
     public function configureOptions(OptionsResolver $resolver)
