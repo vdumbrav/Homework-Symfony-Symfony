@@ -4,9 +4,10 @@
 .main-table {
   width: calc(100% - 200px);
   margin-left: auto;
-  h1 {
-    text-align: center;
-  }
+}
+
+.form-main {
+  padding: 15px;
 }
 
 .app-body {
@@ -15,4 +16,13 @@
 
 .app-footer {
   margin-top: auto;
+}
+
+.header-block {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  a {
+    line-height: 2rem;
+  }
 }
