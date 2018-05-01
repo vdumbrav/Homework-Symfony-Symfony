@@ -31,3 +31,9 @@ services:
         volumes:
             - .:/application
             - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
+    frontend:
+        image: node:9.11.1
+        command: sh -c "npm i && npm run encore dev --watch "
+        working_dir: /application
+        volumes:
+            - .:/application
