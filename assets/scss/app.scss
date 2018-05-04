@@ -1,37 +1,49 @@
-@import '~@coreui/coreui/scss/coreui';
+@import "~@coreui/coreui/scss/coreui";
 @import "~datatables.net-bs4/css/dataTables.bootstrap4.css";
 
 .main-table {
-  width: calc(100% - 200px);
-  margin-left: auto;
+    width: calc(100% - 165px);
+    margin-left: auto;
+    padding: 0 25px;
 }
 
 .form-main {
-  padding: 15px;
+    padding: 15px;
 }
 
 .app-body {
-  flex-grow: 0;
+    flex-grow: 0;
 }
 
 .app-footer {
-  margin-top: auto;
+    margin-top: auto;
+}
+
+.table {
+    display: none;
+}
+
+table.dataTable {
+    display: table;
 }
 
 .header-block {
-  display: flex;
-  padding: 20px;
-  justify-content: space-between;
-  a {
-    line-height: 2rem;
-  }
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+
+    a {
+        line-height: 2rem;
+    }
 }
 
 .card {
-  display: block;
-  margin: 2.5em auto auto;
-  .list-group-item, .card-footer {
-    display: flex;
-    justify-content: space-between;
-  }
+    display: block;
+    margin: 2.5em auto auto;
+
+    .list-group-item,
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+    }
 }
