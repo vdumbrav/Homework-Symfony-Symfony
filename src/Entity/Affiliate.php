@@ -61,15 +61,6 @@ class Affiliate
     }
 
     /**
-     * toString
-     * @return string
-     */
-    public function __toString()
-    {
-        return (string)$this->getId();
-    }
-
-    /**
      * @return int|null
      */
     public function getId(): ?int
