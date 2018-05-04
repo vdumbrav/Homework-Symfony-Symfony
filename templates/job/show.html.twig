@@ -3,78 +3,20 @@
 {% block title %}Job{% endblock %}
 
 {% block body %}
-    <h1>Job</h1>
-
-    <table class="table">
-        <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ job.id }}</td>
-        </tr>
-        <tr>
-            <th>Type</th>
-            <td>{{ job.type }}</td>
-        </tr>
-        <tr>
-            <th>Company</th>
-            <td>{{ job.company }}</td>
-        </tr>
-        <tr>
-            <th>Logo</th>
-            <td>{{ job.logo }}</td>
-        </tr>
-        <tr>
-            <th>Url</th>
-            <td>{{ job.url }}</td>
-        </tr>
-        <tr>
-            <th>Position</th>
-            <td>{{ job.position }}</td>
-        </tr>
-        <tr>
-            <th>Location</th>
-            <td>{{ job.location }}</td>
-        </tr>
-        <tr>
-            <th>Description</th>
-            <td>{{ job.description }}</td>
-        </tr>
-        <tr>
-            <th>HowToApply</th>
-            <td>{{ job.howToApply }}</td>
-        </tr>
-        <tr>
-            <th>Token</th>
-            <td>{{ job.token }}</td>
-        </tr>
-        <tr>
-            <th>Public</th>
-            <td>{{ job.public ? 'Yes' : 'No' }}</td>
-        </tr>
-        <tr>
-            <th>Activated</th>
-            <td>{{ job.activated ? 'Yes' : 'No' }}</td>
-        </tr>
-        <tr>
-            <th>Email</th>
-            <td>{{ job.email }}</td>
-        </tr>
-        <tr>
-            <th>ExpiresAt</th>
-            <td>{{ job.expiresAt ? job.expiresAt|date('Y-m-d H:i:s') : '' }}</td>
-        </tr>
-        <tr>
-            <th>CreatedAt</th>
-            <td>{{ job.createdAt ? job.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-        </tr>
-        <tr>
-            <th>UpdatedAt</th>
-            <td>{{ job.updatedAt ? job.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('job_list') }}">back to list</a>
-
-    <a href="#">edit</a>
+    <div class="card" style="width: 35rem;">
+        <img class="card-img-top" src="{{ job.logo }}" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">{{ job.description }}</h4>
+            <p class="card-text">{{ job.howToApply }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><span>{{ job.type }} </span> <span>{{ job.position }} </span><span>{{ job.company }}</span></li>
+            <li class="list-group-item"><span>{{ job.location }} </span><span>{{ job.email }}</span></li>
+            <li class="list-group-item"><span><a href="{{ job.url }}">url</a></span><span>{{ job.expiresAt ? job.expiresAt|date('Y-m-d H:i:s') : '' }}</span></li>
+        </ul>
+        <div class="card-footer">
+            <a class="btn btn-link" href="{{ path('job_list') }}">Back to list</a>
+            <a class="btn btn-primary" href="#" >Edit</a>
+        </div>
+    </div>
 {% endblock %}
