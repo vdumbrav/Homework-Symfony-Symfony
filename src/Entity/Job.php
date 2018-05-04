@@ -426,8 +426,12 @@ class Job
      */
     public function prePersist()
     {
-        $this->createdAt = new \DateTime();
-        $this->updatedAt = new \DateTime();
+        $dateTime = new \DateTime();
+        $this->createdAt = $dateTime;
+        $this->updatedAt = $dateTime;
+        if (!$this->expiresAt) {
+            $this->expiresAt = $dateTime->modify('+30 days');
+        }
     }
 
     /**
