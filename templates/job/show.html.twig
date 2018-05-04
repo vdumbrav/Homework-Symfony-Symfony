@@ -74,9 +74,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('job_index') }}">back to list</a>
+    <a href="{{ path('job_list') }}">back to list</a>
 
-    <a href="{{ path('job_edit', {'id': job.id}) }}">edit</a>
-
-    {{ include('job/_delete_form.html.twig') }}
+    <a href="#">edit</a>
 {% endblock %}
