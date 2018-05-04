@@ -20,7 +20,7 @@ class JobController extends Controller
      */
     public function list(JobRepository $jobRepository): Response
     {
-        return $this->render('job/index.html.twig', ['jobs' => $jobRepository->findAll()]);
+        return $this->render('job/index.html.twig', ['jobs' => $jobRepository->findActiveJob()]);
     }
 
     /**

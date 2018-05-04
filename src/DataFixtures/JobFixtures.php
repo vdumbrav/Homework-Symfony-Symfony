@@ -29,7 +29,6 @@ class JobFixtures extends Fixture implements OrderedFixtureInterface
             $job->setLogo($faker->imageUrl());
             $job->setUrl($faker->url);
             $job->setPosition($faker->jobTitle);
-//            $location = $faker->country.', '.$faker->city;
             $job->setLocation($faker->country);
             $job->setDescription($faker->text(100));
             $job->setHowToApply($faker->text(30));
@@ -37,7 +36,6 @@ class JobFixtures extends Fixture implements OrderedFixtureInterface
             $job->setActivated($faker->boolean);
             $job->setToken($faker->text);
             $job->setEmail($faker->companyEmail);
-            $job->setExpiresAt($faker->dateTime);
 
             $manager->persist($job);
         }
