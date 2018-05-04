@@ -17,6 +17,8 @@ class AffiliateController extends Controller
 {
     /**
      * @Route("/", name="affiliate_list", methods="GET")
+     * @param AffiliateRepository $affiliateRepository
+     * @return Response
      */
     public function list(AffiliateRepository $affiliateRepository): Response
     {
@@ -25,6 +27,8 @@ class AffiliateController extends Controller
 
     /**
      * @Route("/{id}", name="affiliate_show", methods="GET")
+     * @param Affiliate $affiliate
+     * @return Response
      */
     public function show(Affiliate $affiliate): Response
     {

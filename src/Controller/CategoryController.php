@@ -17,6 +17,8 @@ class CategoryController extends Controller
 {
     /**
      * @Route("/", name="category_list", methods="GET")
+     * @param CategoryRepository $categoryRepository
+     * @return Response
      */
     public function list(CategoryRepository $categoryRepository): Response
     {
@@ -25,6 +27,8 @@ class CategoryController extends Controller
 
     /**
      * @Route("/{id}", name="category_show", methods="GET")
+     * @param Category $category
+     * @return Response
      */
     public function show(Category $category): Response
     {

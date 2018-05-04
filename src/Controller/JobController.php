@@ -17,6 +17,8 @@ class JobController extends Controller
 {
     /**
      * @Route("/", name="job_list", methods="GET")
+     * @param JobRepository $jobRepository
+     * @return Response
      */
     public function list(JobRepository $jobRepository): Response
     {
@@ -25,6 +27,8 @@ class JobController extends Controller
 
     /**
      * @Route("/{id}", name="job_show", methods="GET")
+     * @param Job $job
+     * @return Response
      */
     public function show(Job $job): Response
     {
