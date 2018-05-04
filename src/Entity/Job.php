@@ -430,7 +430,7 @@ class Job
         $this->createdAt = $dateTime;
         $this->updatedAt = $dateTime;
         if (!$this->expiresAt) {
-            $this->expiresAt = $dateTime->modify('+30 days');
+            $this->expiresAt = (clone $dateTime)->modify('+30 days');
         }
     }
 
