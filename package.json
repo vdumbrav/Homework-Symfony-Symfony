@@ -20,6 +20,9 @@
     "datatables.net-bs4": "^1.10.16",
     "datatables.net-responsive-bs4": "^2.2.1",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "vue": "^2.5.13",
+    "vue-loader": "^13.6.2",
+    "vue-template-compiler": "^2.5.13"
   }
 }

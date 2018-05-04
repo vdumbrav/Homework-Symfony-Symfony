@@ -2,7 +2,7 @@
 var Encore = require('@symfony/webpack-encore');
 
 Encore
-     /* Установим путь куда будет осуществляться сборка */
+/* Установим путь куда будет осуществляться сборка */
     .setOutputPath('public/build/')
     /* Укажем web путь до каталога web/build */
     .setPublicPath('/build')
@@ -14,12 +14,15 @@ Encore
     .enableSassLoader()
     /* --- Добавим основной JavaScript в сборку --- */
     .addEntry('js/app', './assets/js/app.js')
+    .addEntry('js/vendor', './assets/js/vendor.js')
     /* Добавим наш главный файл ресурсов в сборку */
     .addStyleEntry('css/app', './assets/scss/app.scss')
     /* В режиме разработки будем генерировать карту ресурсов */
     .enableSourceMaps(!Encore.isProduction())
 
-    .enableVersioning(Encore.isProduction());
+    .enableVersioning(Encore.isProduction())
+    // add vue
+    .enableVueLoader();
 
 /* Экспортируем финальную конфигурацию */
 var config = Encore.getWebpackConfig();
