@@ -19,7 +19,7 @@ class AffiliateFixtures extends Fixture implements OrderedFixtureInterface
     {
         $faker = Faker\Factory::create();
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
 
             $affiliate = new Affiliate();
             $affiliate->setActive($faker->boolean);

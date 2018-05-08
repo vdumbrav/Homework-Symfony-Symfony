@@ -19,10 +19,10 @@ class JobFixtures extends Fixture implements OrderedFixtureInterface
     {
         $faker = Faker\Factory::create();
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
 
             $job = new Job();
-            $job->setCategory($this->getReference('category_' . $i));
+            $job->setCategory($this->getReference('category_' . $faker->numberBetween(0,99)));
 
             $job->setType('full-time');
             $job->setCompany($faker->company);

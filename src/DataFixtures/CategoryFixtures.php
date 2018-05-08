@@ -21,9 +21,9 @@ class CategoryFixtures extends Fixture implements OrderedFixtureInterface
 
         $faker = Faker\Factory::create();
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $category = new Category();
-            $category->setName($faker->word);
+            $category->setName(ucfirst($faker->word));
 
             $manager->persist($category);
 
