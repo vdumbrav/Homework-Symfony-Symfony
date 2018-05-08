@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Table(name="categories")
@@ -23,6 +24,12 @@ class Category
      * @ORM\Column(type="string", length=100)
      */
     private $name;
+
+    /**
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(length=128, unique=true)
+     */
+    private $slug;
 
     /**
      * @var Job[]|ArrayCollection
@@ -72,6 +79,24 @@ class Category
         $this->name = $name;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param $slug
+     *
+     * @return void
+     */
+    public function setSlug($slug): void
+    {
+        $this->slug = $slug;
     }
 
     /**
@@ -140,5 +165,15 @@ class Category
         $this->affiliates->removeElement($affiliate);
 
         return $this;
+    }
+
+    /**
+     * @return ArrayCollection
+     */
+    public function getActiveJobs(): ArrayCollection
+    {
+        return $this->jobs->filter(function (Job $job) {
+            return $job->isActive();
+        });
     }
 }
