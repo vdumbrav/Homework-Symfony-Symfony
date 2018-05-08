@@ -22,6 +22,7 @@ class JobController extends Controller
         $categories = $this->getDoctrine()
             ->getRepository(Category::class)
             ->findCategoriesWithActiveJobs();
+
         return $this->render('job/index.html.twig', [
             'categories' => $categories,
         ]);
