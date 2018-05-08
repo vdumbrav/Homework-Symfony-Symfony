@@ -21,7 +21,7 @@
                 <td>{{ category.id }}</td>
                 <td>{{ category.name }}</td>
                 <td>
-                    <a href="{{ path('category_show', {'id': category.id}) }}">show</a>
+                    <a href="{{ path('category_show', {'slug': category.slug}) }}">show</a>
                     <a href="#">edit</a>
                 </td>
             </tr>
