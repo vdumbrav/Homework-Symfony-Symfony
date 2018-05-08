@@ -167,13 +167,4 @@ class Category
         return $this;
     }
 
-    /**
-     * @return ArrayCollection
-     */
-    public function getActiveJobs(): ArrayCollection
-    {
-        return $this->jobs->filter(function (Job $job) {
-            return $job->isActive();
-        });
-    }
 }

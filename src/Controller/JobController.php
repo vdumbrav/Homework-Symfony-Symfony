@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Category;
 use App\Entity\Job;
-use App\Repository\JobRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,12 +15,16 @@ class JobController extends Controller
 {
     /**
      * @Route("/", name="job_list", methods="GET")
-     * @param JobRepository $jobRepository
      * @return Response
      */
-    public function list(JobRepository $jobRepository): Response
+    public function list(): Response
     {
-        return $this->render('job/index.html.twig', ['jobs' => $jobRepository->findActiveJob()]);
+        $categories = $this->getDoctrine()
+            ->getRepository(Category::class)
+            ->findCategoriesWithActiveJobs();
+        return $this->render('job/index.html.twig', [
+            'categories' => $categories,
+        ]);
     }
 
     /**

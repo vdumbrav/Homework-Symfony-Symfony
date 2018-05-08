@@ -3,10 +3,12 @@
 {% block title %}Job List{% endblock %}
 
 {% block body %}
-
     <div class="header-block">
-        <h1>Job</h1><a class="btn btn-primary" href="#">Create new Job</a>
+        <h1>Jobs</h1>
+        <a class="btn btn-primary" href="#">Create new Job</a>
     </div>
+    {% for category in categories %}
+<h4 class="text-black-50 text-center">{{ category.name }}</h4>
     <table class="table table-striped table-bordered display responsive nowrap" width="100% ">
         <thead>
         <tr>
@@ -22,7 +24,7 @@
         </tr>
         </thead>
         <tbody>
-        {% for job in jobs %}
+        {% for job in category.jobs|slice(0,jobs_show_limit) %}
             <tr>
                 <td>{{ job.type }}</td>
                 <td>{{ job.company }}</td>
@@ -44,5 +46,6 @@
         {% endfor %}
         </tbody>
     </table>
+    {% endfor %}
 
 {% endblock %}
