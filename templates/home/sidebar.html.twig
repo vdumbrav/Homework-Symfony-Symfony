@@ -10,17 +10,17 @@
                 <li class="nav-title">JOBBET</li>
                 <li class="nav-item">
                     <a class="nav-link {% if app.request.attributes.get('_route') starts with 'category' %}active{% endif %}"
-                       href="{{ path('category_list') }}">
+                       href="#">
                         <i class="nav-icon icon-drop"></i> Category</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if app.request.attributes.get('_route') starts with 'job' %}active{% endif %}"
-                       href="{{ path('job_list') }}">
+                       href="{{ path('job.list') }}">
                         <i class="nav-icon icon-pencil"></i> Job</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if app.request.attributes.get('_route') starts with 'affiliate' %}active{% endif %}"
-                       href="{{ path('affiliate_list') }}">
+                       href="{{ path('affiliate.list') }}">
                         <i class="nav-icon icon-pencil"></i> Affiliate</a>
                 </li>
             </ul>

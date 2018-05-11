@@ -6,7 +6,8 @@
     <div class="header-block">
         <h1>Affiliate</h1><a class="btn btn-primary" href="#">Create new Affiliate</a>
     </div>
-    <table class="table table-striped table-bordered display responsive nowrap table-responsive-sm table-datatables" width="100% ">
+    <table class="table table-striped table-bordered display responsive nowrap table-responsive-sm table-datatables"
+           width="100% ">
         <thead>
         <tr>
             <th>Id</th>
@@ -28,7 +29,7 @@
                 <td>{{ affiliate.active ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-secondary">Inactive</span>' }}</td>
                 <td>{{ affiliate.createdAt ? affiliate.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('affiliate_show', {'id': affiliate.id}) }}">show</a>
+                    <a href="{{ path('affiliate.show', {'id': affiliate.id}) }}">show</a>
                     <a href="#">edit</a>
                 </td>
             </tr>

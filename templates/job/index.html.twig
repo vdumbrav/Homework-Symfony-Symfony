@@ -8,8 +8,10 @@
         <a class="btn btn-primary" href="#">Create new Job</a>
     </div>
     {% for category in categories %}
-<h4 class="text-black-50 text-center">{{ category.name }}</h4>
-    <table class="table table-striped table-bordered display responsive nowrap table-simple" width="100% ">
+        <a href="{{ path('category.show', {slug: category.slug}) }}">
+            {{ category.name }}
+        </a>
+        <table class="table table-striped table-bordered display responsive nowrap table-simple" width="100% ">
         <thead>
         <tr>
             <th>Type</th>
@@ -35,7 +37,7 @@
                 <td>{{ job.email }}</td>
                 <td>{{ job.createdAt ? job.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('job_show', {'id': job.id}) }}">show</a>
+                    <a href="{{ path('job.show', {'id': job.id}) }}">show</a>
                     <a href="#">edit</a>
                 </td>
             </tr>

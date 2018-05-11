@@ -1,26 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category{% endblock %}
+{% block title %}
+    Jobs in the {{ category.name }} category
+{% endblock %}
 
 {% block body %}
+    <h4 class="text-center m-5">{{ category.name }}</h4>
+    {% include 'job/table.html.twig' with {'jobs': activeJobs} only %}
 
-    <h1>Category</h1>
-
-    <table class="table">
-        <tbody>
-        <tr>
-            <th>Id</th>
-            <td>{{ category.id }}</td>
-        </tr>
-        <tr>
-            <th>Name</th>
-            <td>{{ category.name }}</td>
-        </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('category_list') }}">back to list</a>
-
-    <a href="#}">edit</a>
-
+    <div class="navigation center">
+        {{ knp_pagination_render(activeJobs) }}
+    </div>
 {% endblock %}
