@@ -6,3 +6,4 @@ twig:
         - 'bootstrap_4_layout.html.twig'
     globals:
         jobs_show_limit: 10
+        max_job_on_category: '%max_job_on_category%'
