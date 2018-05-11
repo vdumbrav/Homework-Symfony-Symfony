@@ -28,6 +28,10 @@ class JobRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    /**
+     * @param Category $category
+     * @return AbstractQuery
+     */
     public function getPaginatedActiveJobsByCategoryQuery(Category $category): AbstractQuery
     {
         return $this->createQueryBuilder('job')
@@ -37,7 +41,7 @@ class JobRepository extends ServiceEntityRepository
             ->setParameters([
                 'category' => $category,
                 'date' => new \DateTime(),
-                'activated' => true
+                'activated' => true,
             ])
             ->getQuery();
     }
