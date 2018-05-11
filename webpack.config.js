@@ -13,7 +13,6 @@ Encore
     /* Включим поддержку sass/scss файлов */
     .enableSassLoader()
     /* --- Добавим основной JavaScript в сборку --- */
-    .addEntry('js/app', './assets/js/app.js')
     .addEntry('js/vendor', './assets/js/vendor.js')
     /* Добавим наш главный файл ресурсов в сборку */
     .addStyleEntry('css/app', './assets/scss/app.scss')
@@ -21,8 +20,6 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
 
     .enableVersioning(Encore.isProduction())
-    // add vue
-    .enableVueLoader();
 
 /* Экспортируем финальную конфигурацию */
 var config = Encore.getWebpackConfig();

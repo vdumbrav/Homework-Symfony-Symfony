@@ -23,10 +23,13 @@
     display: none;
 }
 
-table.dataTable {
+table.dataTable, table.table-simple {
     display: table;
 }
 
+table.table-simple {
+    margin-left: 15px;
+}
 .header-block {
     display: flex;
     padding: 20px;
