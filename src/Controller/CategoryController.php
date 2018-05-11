@@ -17,7 +17,7 @@ class CategoryController extends Controller
 {
     /**
      *
-     * @Route("/{slug}/{page}", name="category.show", defaults={"page":1})
+     * @Route("/{slug}/{page}", name="category.show", defaults={"page":1}, requirements={"id" = "\d+"})
      * @Method("GET")
      *
      * @param Category $category
@@ -31,8 +31,7 @@ class CategoryController extends Controller
         Category $category,
         int $page,
         PaginatorInterface $paginator
-    ): Response
-    {
+    ): Response {
         $activeJobs = $paginator->paginate(
             $this->getDoctrine()
                 ->getRepository(Job::class)
@@ -42,7 +41,7 @@ class CategoryController extends Controller
         );
         return $this->render('category/show.html.twig', array(
             'category' => $category,
-            'activeJobs' => $activeJobs
+            'activeJobs' => $activeJobs,
         ));
     }
 }

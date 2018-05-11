@@ -29,7 +29,7 @@ class JobController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="job.show", methods="GET")
+     * @Route("/{id}", name="job.show", methods="GET", requirements={"id" = "\d+"})
      * @param Job $job
      * @return Response
      */
