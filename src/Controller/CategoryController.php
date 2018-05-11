@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Category;
-use App\Repository\CategoryRepository;
+use App\Entity\Job;
+use Knp\Component\Pager\PaginatorInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,22 +16,33 @@ use Symfony\Component\Routing\Annotation\Route;
 class CategoryController extends Controller
 {
     /**
-     * @Route("/", name="category_list", methods="GET")
-     * @param CategoryRepository $categoryRepository
-     * @return Response
-     */
-    public function list(CategoryRepository $categoryRepository): Response
-    {
-        return $this->render('category/index.html.twig', ['categories' => $categoryRepository->findAll()]);
-    }
-
-    /**
-     * @Route("/{slug}", name="category_show", methods="GET")
+     *
+     * @Route("/{slug}/{page}", name="category.show", defaults={"page":1})
+     * @Method("GET")
+     *
      * @param Category $category
+     * @param int $page
+     * @param PaginatorInterface $paginator
+     *
      * @return Response
      */
-    public function show(Category $category): Response
+
+    public function show(
+        Category $category,
+        int $page,
+        PaginatorInterface $paginator
+    ): Response
     {
-        return $this->render('category/show.html.twig', ['category' => $category]);
+        $activeJobs = $paginator->paginate(
+            $this->getDoctrine()
+                ->getRepository(Job::class)
+                ->getPaginatedActiveJobsByCategoryQuery($category),
+            $page,
+            $this->getParameter('max_job_on_category')
+        );
+        return $this->render('category/show.html.twig', array(
+            'category' => $category,
+            'activeJobs' => $activeJobs
+        ));
     }
 }
