@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AffiliateController extends Controller
 {
     /**
-     * @Route("/", name="affiliate_list", methods="GET")
+     * @Route("/", name="affiliate.list", methods="GET")
      * @param AffiliateRepository $affiliateRepository
      * @return Response
      */
@@ -24,7 +24,7 @@ class AffiliateController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="affiliate_show", methods="GET")
+     * @Route("/{id}", name="affiliate.show", methods="GET")
      * @param Affiliate $affiliate
      * @return Response
      */

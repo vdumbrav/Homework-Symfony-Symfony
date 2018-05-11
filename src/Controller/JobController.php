@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class JobController extends Controller
 {
     /**
-     * @Route("/", name="job_list", methods="GET")
+     * @Route("/", name="job.list", methods="GET")
      * @return Response
      */
     public function list(): Response
@@ -29,7 +29,7 @@ class JobController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="job_show", methods="GET")
+     * @Route("/{id}", name="job.show", methods="GET")
      * @param Job $job
      * @return Response
      */
