@@ -39,9 +39,9 @@ class CategoryController extends Controller
             $page,
             $this->getParameter('max_job_on_category')
         );
-        return $this->render('category/show.html.twig', array(
+        return $this->render('category/show.html.twig', [
             'category' => $category,
             'activeJobs' => $activeJobs,
-        ));
+        ]);
     }
 }
