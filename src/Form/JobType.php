@@ -98,7 +98,7 @@ class JobType extends AbstractType
             ->add('email', EmailType::class, [
                 'constraints' => [
                     new NotBlank(),
-                    new Email()
+                    new Email(),
                 ]
             ])
             ->add('category', EntityType::class, [

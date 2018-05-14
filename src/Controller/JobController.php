@@ -51,7 +51,7 @@ class JobController extends Controller
      *
      * @return Response
      */
-    public function createAction(Request $request, EntityManagerInterface $em): Response
+    public function create(Request $request, EntityManagerInterface $em): Response
     {
         $job = new Job();
         $form = $this->createForm(JobType::class, $job);
@@ -65,7 +65,7 @@ class JobController extends Controller
         }
 
         return $this->render('job/create.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
         ]);
     }
 }

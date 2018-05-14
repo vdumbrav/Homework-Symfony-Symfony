@@ -17,7 +17,7 @@ class CategoryController extends Controller
 {
     /**
      *
-     * @Route("/{slug}/{page}", name="category.show", defaults={"page":1}, requirements={"id" = "\d+"})
+     * @Route("/{slug}/{page}", name="category.show", defaults={"page":1}, requirements={"page" = "\d+"})
      * @Method("GET")
      *
      * @param Category $category

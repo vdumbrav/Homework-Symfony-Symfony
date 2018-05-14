@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ORM\Table(name="jobs")
@@ -150,24 +151,24 @@ class Job
     }
 
     /**
-     * @return null|string
+     * @return string|null|UploadedFile
      */
-    public function getLogo(): ?string
+    public function getLogo()
     {
         return $this->logo;
     }
 
     /**
-     * @param string $logo
+     * @param string|null|UploadedFile $logo
      *
-     * @return Job
+     * @return self
      */
-    public function setLogo(?string $logo): self
+    public function setLogo($logo): self
     {
         $this->logo = $logo;
-
         return $this;
     }
+
 
     /**
      * @return null|string
