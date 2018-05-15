@@ -26,7 +26,7 @@ class JobFixtures extends Fixture implements OrderedFixtureInterface
 
             $job->setType('full-time');
             $job->setCompany($faker->company);
-            $job->setLogo($faker->imageUrl());
+            $job->setLogo('symfony.png');
             $job->setUrl($faker->url);
             $job->setPosition($faker->jobTitle);
             $job->setLocation($faker->country);
@@ -34,7 +34,7 @@ class JobFixtures extends Fixture implements OrderedFixtureInterface
             $job->setHowToApply($faker->text(30));
             $job->setPublic($faker->boolean);
             $job->setActivated($faker->boolean);
-            $job->setToken($faker->text);
+            $job->setToken($faker->sha256);
             $job->setEmail($faker->companyEmail);
 
             $manager->persist($job);
