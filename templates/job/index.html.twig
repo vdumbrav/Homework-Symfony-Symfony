@@ -8,7 +8,7 @@
         <a class="btn btn-primary" href="{{ path('job.create') }}">Create new Job</a>
     </div>
     {% for category in categories %}
-        <a href="{{ path('category.show', {slug: category.slug}) }}">
+        <a class="link-right" href="{{ path('category.show', {slug: category.slug}) }}">
             {{ category.name }}
         </a>
         <table class="table table-striped table-bordered display responsive nowrap table-simple" width="100% ">

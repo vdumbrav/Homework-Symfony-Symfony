@@ -15,7 +15,7 @@
             <li class="list-group-item"><span><a href="{{ job.url }}">url</a></span><span>{{ job.expiresAt ? job.expiresAt|date('Y-m-d H:i:s') : '' }}</span></li>
         </ul>
         <div class="card-footer">
-            <a class="btn btn-link" href="{{ path('job_list') }}">Back to list</a>
+            <a class="btn btn-link" href="{{ path('job.list') }}">Back to list</a>
             <a class="btn btn-primary" href="#" >Edit</a>
         </div>
     </div>
