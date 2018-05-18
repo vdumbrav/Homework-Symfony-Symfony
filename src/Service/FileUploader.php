@@ -30,6 +30,7 @@ class FileUploader
      *
      * @return string
      *
+     * @throws \Exception
      */
     public function upload(UploadedFile $file) : string
     {

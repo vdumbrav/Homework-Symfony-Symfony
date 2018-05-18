@@ -9,6 +9,7 @@ class JobTokenListener
 {
     /**
      * @param LifecycleEventArgs $args
+     * @throws \Exception
      */
     public function prePersist(LifecycleEventArgs $args)
     {
